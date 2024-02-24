@@ -1,3 +1,5 @@
+
+// ............show data normally...........//
 const btn1 = document.getElementById('btn1');
 const result = document.getElementById('result');
 
@@ -31,6 +33,8 @@ btn1.addEventListener('click', function () {
                 result.appendChild(br);
                 result.appendChild(br);
 
+
+
             });
 
 
@@ -38,5 +42,57 @@ btn1.addEventListener('click', function () {
         .catch(error=>{
             console.log('error fatching data', error);
             result.innerHTML=error;
+        })
+});
+
+
+
+// ............show data with Tabular formet...........//
+
+
+const btn2 = document.getElementById('btn2');
+
+
+let table = document.createElement("table");
+table.setAttribute('border', '2');
+table.classList.add('tableform');
+let tableHeading = `<tr id="table-row">
+    <td class="table-data"> user id</td>
+    <td class="table-data"> title</td>
+    <td class="table-data"> body</td>
+</tr>`
+table.innerHTML+=tableHeading;
+
+
+btn2.addEventListener('click', function () {
+    fetch("https://jsonplaceholder.typicode.com/posts")
+        .then(function (response) {
+            return response.json()
+        })
+        .then((data) => {
+            console.log(data);
+
+            buildTable(data);
+
+            function buildTable(data) {
+
+
+                for (let i = 0; i < data.length; i++) {
+                    let row = `<tr>
+                                 <td class="inner-data"> ${data[i].id}</td>
+                                 <td class="inner-data"> ${data[i].title}</td>
+                                 <td class="inner-data"> ${data[i].body}</td>
+                            </tr>`
+
+                    table.innerHTML += row;
+                }
+                result.appendChild(table);
+            }
+
+
+        })
+        .catch(error => {
+            console.log('error fatching data', error);
+            result.innerHTML = error;
         })
 });
