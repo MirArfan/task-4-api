@@ -15,17 +15,17 @@ btn1.addEventListener('click', function () {
                 const p = document.createElement('p');
                 const br = document.createElement('br');
 
-                h3.textContent = `User id : ${item.id}`;
+                h3.innerHTML = `User id : ${item.id}`;
                 h3.classList.add('userId');
                 result.appendChild(h3);
                 result.appendChild(br);
 
-                h2.textContent = `User Title : ${item.title}`;
+                h2.innerHTML = `User Title : ${item.title}`;
                 h2.classList.add('userTitle');
                 result.appendChild(h2);
                 result.appendChild(br);
 
-                p.textContent = `User Body : ${item.body}`;
+                p.innerHTML = `User Body : ${item.body}`;
                 p.classList.add('userbody');
                 result.appendChild(p);
                 result.appendChild(br);
@@ -34,5 +34,9 @@ btn1.addEventListener('click', function () {
             });
 
 
+        })
+        .catch(error=>{
+            console.log('error fatching data', error);
+            result.innerHTML=error;
         })
 });
