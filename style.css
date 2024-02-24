@@ -31,7 +31,9 @@ body{
     font-size: 18px;
     color: #000;
 }
-
+/* .tableform{
+    
+} */
 
 .table-data{
     background-color: rgb(47, 184, 211);
@@ -47,4 +49,5 @@ body{
     font-size: 18px;
     padding: 8px 8px 10px 10px;
     border: 1px solid rgb(0, 128, 255);
+    max-width: 700px;
 }
