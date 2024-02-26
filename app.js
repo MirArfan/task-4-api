@@ -96,3 +96,60 @@ btn2.addEventListener('click', function () {
             result.innerHTML = error;
         })
 });
+
+
+
+// ....//////..  async await .... ////...
+
+const apiEndPoint= "https://jsonplaceholder.typicode.com/posts";
+
+const getButton=document.getElementById('getPost');
+const createButton=document.getElementById('createPost');
+const updateButton=document.getElementById('updatePost');
+const patchButton=document.getElementById('patchPost');
+const deleteButton=document.getElementById('deletePost');
+
+
+const getPosts= async ()=>{
+    try{
+        const response =await fetch(apiEndPoint);
+        if(response.status!=200)
+        {
+            throw new Error(`some error, Status code : ${response.status}`);
+        }
+        const posts=await response.json();
+        return posts;
+    }
+    catch(error){
+        console.log(error)
+    }
+};
+
+
+getButton.addEventListener('click',async ()=>{
+   const posts=await getPosts();
+   if(posts){
+
+    const table=`<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Title</th>
+        <th scope="col">Body</th>
+      </tr>
+    </thead>
+    <tbody>
+      ${posts.map((post)=>`<tr>
+      <th class="async-table-data" scope="row">${post.id}</th>
+      <td class="async-table-data">${post.title}</td>
+      <td class="async-table-data">${post.body}</td>
+    </tr>`)
+.join("\n")}
+      
+    </tbody>
+  </table>`;
+   
+  document.getElementById('table').innerHTML=table;
+   }
+  
+})
