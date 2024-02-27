@@ -345,3 +345,45 @@ createButton.addEventListener("click", async () => {
         create_btn2 = true;
     }
 });
+
+
+//.....////.....worker.......//////
+
+
+
+function startWorker() {
+    
+    var worker = new Worker('worker.js');
+    worker.postMessage(apiEndPoint);
+    
+    worker.onmessage = function(e) {
+      
+    //   let patchedDataDiv = document.getElementById('patchedData');
+    //   patchedDataDiv.textContent = JSON.stringify(e.data);
+      console.log(e.data);
+      let posts=e.data;
+      const table = `<table class="table">
+      <thead>
+        <tr>
+          <th class="table-info" scope="col">ID</th>
+          <th class="table-info" scope="col">Title</th>
+          <th class="table-info" scope="col">Body</th>
+        </tr>
+      </thead>
+      <tbody>
+        ${posts.map((post) => `<tr>
+        <th class="async-table-data" scope="row">${post.id}</th>
+        <td class="async-table-data">${post.title}</td>
+        <td class="async-table-data">${post.body}</td>
+      </tr>`)
+                  .join("\n")}
+        
+      </tbody>
+    </table>`;
+  
+          document.getElementById('patchedData').innerHTML = table;
+      
+    };
+  }
+
+
