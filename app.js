@@ -71,15 +71,16 @@ msg_btn.addEventListener("click", function () {
         // form_div.style.width = "100vh";
         form_div.style.padding = "20px";
         form_div.style.borderRadius = "5px";
+        // <label for="email">Email:</label><br>
+        //     <input type="email" id="email" name="email" required style="width: 400px; padding: 8px; margin-bottom: 10px;margin-top: 10px; border: 1px solid #ccc; border-radius: 3px; box-sizing: border-box;"><br>
 
         form_div.innerHTML = `
             <form id="contact-form">
-            <label for="name">Name:</label><br>
-            <input type="text" id="name" name="name" required style="width: 400px; padding: 8px; margin-bottom: 10px; margin-top: 10px; border: 1px solid #ccc; border-radius: 3px; "><br>
-            <label for="email">Email:</label><br>
-            <input type="email" id="email" name="email" required style="width: 400px; padding: 8px; margin-bottom: 10px;margin-top: 10px; border: 1px solid #ccc; border-radius: 3px; box-sizing: border-box;"><br>
-            <label for="message">Message:</label><br>
-            <textarea id="message" name="message" placeholder="Optional" style="width: 400px; padding: 8px; margin-bottom: 10px;margin-top: 10px; border: 1px solid #ccc; border-radius: 3px; box-sizing: border-box;"></textarea><br>
+            <label for="name">Title :</label><br>
+            <input type="text" id="name" name="Title" required style="width: 400px; padding: 8px; margin-bottom: 10px; margin-top: 10px; border: 1px solid #ccc; border-radius: 3px; "><br>
+            
+            <label for="message">Body :</label><br>
+            <textarea id="message" name="Body"  style="width: 400px; padding: 8px; margin-bottom: 10px;margin-top: 10px; border: 1px solid #ccc; border-radius: 3px; box-sizing: border-box;"></textarea><br>
             <button class="form-submit-btn" type="submit" style="width: 100px; padding: 10px; border: none; border-radius: 3px; background-color: #007bff; color: #fff; cursor: pointer; font-size:16px;">Submit</button>
         </form>
     `;
@@ -305,12 +306,11 @@ createButton.addEventListener("click", async () => {
 
             form_div.innerHTML = `
             <form id="contact-form">
-            <label for="name">Name:</label><br>
-            <input type="text" id="name" name="name" required style="width: 400px; padding: 8px; margin-bottom: 10px;margin-top: 10px; border: 1px solid #ccc; border-radius: 3px; "><br>
-            <label for="email">Email:</label><br>
-            <input type="email" id="email" name="email" required style="width: 400px; padding: 8px; margin-bottom: 10px;margin-top: 10px; border: 1px solid #ccc; border-radius: 3px; box-sizing: border-box;"><br>
-            <label for="message">Message:</label><br>
-            <textarea id="message" name="message" placeholder="Optional" style="width: 400px; padding: 8px; margin-bottom: 10px;margin-top: 10px; border: 1px solid #ccc; border-radius: 3px; box-sizing: border-box;"></textarea><br>
+            <label for="name">Title :</label><br>
+            <input type="text" id="name" name="Title" required style="width: 400px; padding: 8px; margin-bottom: 10px; margin-top: 10px; border: 1px solid #ccc; border-radius: 3px; "><br>
+            
+            <label for="message">Body :</label><br>
+            <textarea id="message" name="Body"  style="width: 400px; padding: 8px; margin-bottom: 10px;margin-top: 10px; border: 1px solid #ccc; border-radius: 3px; box-sizing: border-box;"></textarea><br>
             <button class="form-submit-btn" type="submit" style="width: 100px; padding: 10px; border: none; border-radius: 3px; background-color: #007bff; color: #fff; cursor: pointer; font-size:16px;">Submit</button>
         </form>
     `;
