@@ -6,6 +6,8 @@
 }
 body{
     margin: 40px 50px;
+    background-color: rgb(38, 49, 50);
+    color: #ffffff;
 }
 .container,
 .box{
@@ -17,13 +19,13 @@ body{
 .btn-success,
 .add-btn,
 .create-btn,
-#btn2,
+.get-btn-1,
 #btn1{
     padding: 10px 10px;
     font-size: 19px;
     cursor: pointer;
     border-radius: 5px;
-    background-color: rgb(46, 114, 120);
+    background-color: #044a70f4;
     color: #fff;
     border: none;
     margin-bottom: 16px;
@@ -31,15 +33,18 @@ body{
 }
 .userId{
     font-size: 22px;
-    color: rgba(228, 126, 0, 0.979);
+    color: rgba(193, 109, 6, 0.979);
+    margin-bottom: 10px;
 }
 .userTitle{
     font-size: 20px;
-    color: rgb(73, 73, 124);
+    color: rgb(173, 205, 213);
+    margin-bottom: 10px;
 }
 .userbody{
-    font-size: 18px;
-    color: #000;
+    font-size: 20px;
+    color: #eee3fc;
+    margin-bottom: 23px;
 }
 /* .tableform{
     
@@ -54,6 +59,7 @@ body{
     color: #fff;
 
 }
+.async-table-data,
 .inner-data{
     background-color: rgb(206, 214, 223);
     
@@ -62,6 +68,8 @@ body{
     padding: 8px 8px 10px 10px;
     border: 1px solid rgb(0, 128, 255);
     max-width: 700px;
+    background-color: rgb(8, 10, 10);
+    
 }
 /* #table{
     border: 1px solid rgb(0, 128, 255);
@@ -86,10 +94,12 @@ body{
     width: 30%;
     gap: 10px;
 }
+.box h2,
 .h2-heading{
     font-size: 32px;
     font-weight: 700;
     margin-bottom: 12px;
+    color: rgb(137, 255, 218);
 }
 .table-info{
     border: 1px solid rgb(61, 134, 61);
@@ -98,8 +108,17 @@ body{
     background-color: rgb(35, 115, 115);
     color: #fff;
 }
+.box h2,
 .contact-box p{
     font-size: 28px;
     font-weight: 700;
     padding-bottom: 10px;
 }
+.create-post-btn-2{
+    background-color: rgb(223, 132, 5);
+}
+.get-btn-1,
+.get-btn-2{
+    background-color: #00855d;
+}
+

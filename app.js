@@ -34,6 +34,8 @@ if (show_data_normally) {
                     result.appendChild(p);
                     result.appendChild(br);
                     result.appendChild(br);
+                    result.appendChild(br);
+                    result.appendChild(br);
 
 
 
@@ -71,15 +73,15 @@ msg_btn.addEventListener("click", function () {
         form_div.style.borderRadius = "5px";
 
         form_div.innerHTML = `
-    <form id="contact-form">
-    <label for="name">Name:</label><br>
-    <input type="text" id="name" name="name" required style="width: 400px; padding: 8px; margin-bottom: 10px; border: 1px solid #ccc; border-radius: 3px; "><br>
-    <label for="email">Email:</label><br>
-    <input type="email" id="email" name="email" required style="width: 400px; padding: 8px; margin-bottom: 10px; border: 1px solid #ccc; border-radius: 3px; box-sizing: border-box;"><br>
-    <label for="message">Message:</label><br>
-    <textarea id="message" name="message" placeholder="Optional" style="width: 400px; padding: 8px; margin-bottom: 10px; border: 1px solid #ccc; border-radius: 3px; box-sizing: border-box;"></textarea><br>
-    <button class="form-submit-btn" type="submit" style="width: 100px; padding: 10px; border: none; border-radius: 3px; background-color: #007bff; color: #fff; cursor: pointer;">Submit</button>
-</form>
+            <form id="contact-form">
+            <label for="name">Name:</label><br>
+            <input type="text" id="name" name="name" required style="width: 400px; padding: 8px; margin-bottom: 10px; margin-top: 10px; border: 1px solid #ccc; border-radius: 3px; "><br>
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" required style="width: 400px; padding: 8px; margin-bottom: 10px;margin-top: 10px; border: 1px solid #ccc; border-radius: 3px; box-sizing: border-box;"><br>
+            <label for="message">Message:</label><br>
+            <textarea id="message" name="message" placeholder="Optional" style="width: 400px; padding: 8px; margin-bottom: 10px;margin-top: 10px; border: 1px solid #ccc; border-radius: 3px; box-sizing: border-box;"></textarea><br>
+            <button class="form-submit-btn" type="submit" style="width: 100px; padding: 10px; border: none; border-radius: 3px; background-color: #007bff; color: #fff; cursor: pointer; font-size:16px;">Submit</button>
+        </form>
     `;
 
         msg_btn.insertAdjacentElement('afterend', form_div);
@@ -304,12 +306,12 @@ createButton.addEventListener("click", async () => {
             form_div.innerHTML = `
             <form id="contact-form">
             <label for="name">Name:</label><br>
-            <input type="text" id="name" name="name" required style="width: 400px; padding: 8px; margin-bottom: 10px; border: 1px solid #ccc; border-radius: 3px; "><br>
+            <input type="text" id="name" name="name" required style="width: 400px; padding: 8px; margin-bottom: 10px;margin-top: 10px; border: 1px solid #ccc; border-radius: 3px; "><br>
             <label for="email">Email:</label><br>
-            <input type="email" id="email" name="email" required style="width: 400px; padding: 8px; margin-bottom: 10px; border: 1px solid #ccc; border-radius: 3px; box-sizing: border-box;"><br>
+            <input type="email" id="email" name="email" required style="width: 400px; padding: 8px; margin-bottom: 10px;margin-top: 10px; border: 1px solid #ccc; border-radius: 3px; box-sizing: border-box;"><br>
             <label for="message">Message:</label><br>
-            <textarea id="message" name="message" placeholder="Optional" style="width: 400px; padding: 8px; margin-bottom: 10px; border: 1px solid #ccc; border-radius: 3px; box-sizing: border-box;"></textarea><br>
-            <button class="form-submit-btn" type="submit" style="width: 100px; padding: 10px; border: none; border-radius: 3px; background-color: #007bff; color: #fff; cursor: pointer;">Submit</button>
+            <textarea id="message" name="message" placeholder="Optional" style="width: 400px; padding: 8px; margin-bottom: 10px;margin-top: 10px; border: 1px solid #ccc; border-radius: 3px; box-sizing: border-box;"></textarea><br>
+            <button class="form-submit-btn" type="submit" style="width: 100px; padding: 10px; border: none; border-radius: 3px; background-color: #007bff; color: #fff; cursor: pointer; font-size:16px;">Submit</button>
         </form>
     `;
 
